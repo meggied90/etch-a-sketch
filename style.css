@@ -1,0 +1,24 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+}
+
+#frame {
+    display:  flex;
+    flex-wrap: wrap;
+    background-color:purple ;
+    height: 50vh;
+    width: 50vh;
+    border: 1px solid black;
+}
+
+.square {
+    background: white;
+    height: 6.25%;
+    width: 6.25%;
+}

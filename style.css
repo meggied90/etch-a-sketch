@@ -20,9 +20,9 @@ body {
 
 .square {
     background: white;
-    height: 6.25%;
-    width: 6.25%;
-}
+    /* height: 6.25%; */
+    /* width: 6.25%;  */
+} 
 
 #menu {
     display: flex;

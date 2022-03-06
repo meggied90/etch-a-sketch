@@ -6,6 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     width: auto;
+    margin: 0px;
 }
 
 #frame {
@@ -21,4 +22,22 @@ body {
     background: white;
     height: 6.25%;
     width: 6.25%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    height: 25vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset {
+    align-self:center;
+    justify-self: center;
+}
+
+#base {
+    height:25vh;
 }

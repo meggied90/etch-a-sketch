@@ -15,4 +15,9 @@ squares.forEach(function(square) {
     })
 })
 
+document.getElementById("reset").onclick = () => {
+    squares.forEach(function (square) {
+        square.style.backgroundColor = "white";
+    });
+}
 

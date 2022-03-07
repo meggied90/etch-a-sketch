@@ -9,9 +9,25 @@
     
 </head>
 <body>
-    <div id="menu">
-        <button id="reset">Reset</button>
+    <div class="menu">
+        <div class="resetbutton">
+            <button id="reset">Reset</button>
+        </div>
+        <div class ="settings">
+            <div class="slider">
+                <div id="slidervalue">
+                    <span>Squares per row:  </span>
+                    <span id="slidernumber"></span>
+                </div>
+                <input type="range" min="1" max="100" value="16" class="slider" id="squarecount">
+            </div>
+            <div class="colorpicker">
+                <span>Choose your color: </span>
+                <input type="color" id="squarecolor">
+            </div>
+        </div>
     </div>
+
     <div id="frame">
     </div>
     <div id="base"></div>

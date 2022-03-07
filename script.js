@@ -1,6 +1,14 @@
-let perRow = 16
+let slider = document.getElementById("squarecount");
+let perRow = slider.value;
 let totalSquares = Math.pow(perRow, 2)
 let side = (1 / perRow)*100 + "%"
+let slideroutput =   document.getElementById("slidernumber");
+slideroutput.innerHTML = perRow
+
+slider.oninput = function () {
+    slideroutput.innerHTML = this.value
+}
+
 let squares = document.querySelectorAll(".square")
 
 function drawSquares() {
@@ -14,6 +22,9 @@ function drawSquares() {
     };
 };
 
+let squarecolor = document.getElementById("squarecolor")
+console.log(squarecolor.value)
+
 function redefineSquares() {
     let squares = document.querySelectorAll(".square")
     squares.forEach(function (square) {
@@ -23,7 +34,7 @@ function redefineSquares() {
 
     squares.forEach(function(square) {
         square.addEventListener("mouseover", function colorchange() {
-            square.style.backgroundColor = "orange";
+            square.style.backgroundColor = squarecolor.value;
         })
     })
 }
@@ -40,13 +51,7 @@ function removeSquares() {
 
 document.getElementById("reset").onclick = () => {
     removeSquares();
-    input = prompt("How many squares per row do you want?");
-    while (input > 100) {
-        input = prompt("I'm sorry, that will overwhelm the computer. Please \
-        don't go over 100. How many squares per row do you want?");
-    }
-    perRow = input;
-
+    perRow = slider.value;
     totalSquares = Math.pow(perRow, 2);
     side = (1 / perRow)*100 + "%";
     drawSquares();
